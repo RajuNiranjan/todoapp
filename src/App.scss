@@ -1,0 +1,125 @@
+@import "./styles/Responsive.scss";
+
+body {
+  // background-color: #002;
+  background-image: url("./asserts/todobglg.jpg");
+  height: calc(100vh - 20px);
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.App {
+  .container {
+    width: 450px;
+    height: max-content;
+    padding: 10px;
+    box-shadow: rgba(206, 206, 220, 0.601) 0px 7px 29px 0px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: auto;
+    margin-top: 10%;
+    background-color: #fff;
+
+    @include sm {
+      width: calc(100vw - 20px);
+    }
+
+    .searchItem {
+      width: calc(100% - 160px);
+      margin-left: auto;
+      background-color: #eaeaea;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-radius: 10px;
+      padding: 5px;
+
+      input {
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+      }
+
+      i {
+        cursor: pointer;
+      }
+    }
+
+    form {
+      display: flex;
+      gap: 10px;
+      display: flex;
+      border-radius: 20px;
+      height: 40px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+      input {
+        padding: 0 10px;
+        border-radius: 20px;
+        border: 0;
+        outline: 0;
+        flex: 1;
+      }
+
+      button {
+        border-radius: 20px;
+        outline: 0;
+        border: 0;
+        width: 60px;
+        background: orange;
+        font-weight: 600;
+        color: #fff;
+
+        &:hover {
+          background: orangered;
+        }
+      }
+    }
+  }
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: space-between;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .btn {
+    display: flex;
+    gap: 10px;
+
+    .edit {
+      padding: 2px;
+      border: 0;
+      outline: 0;
+      color: green;
+      font-weight: 600;
+    }
+
+    .delete {
+      border: 0;
+      outline: 0;
+      color: red;
+    }
+
+    button {
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  }
+}
+
+.noItem {
+  text-align: center;
+  font-size: 12px;
+  text-transform: capitalize;
+}
